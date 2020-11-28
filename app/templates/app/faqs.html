@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preguntas frecuentes</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'app/img/vvdesign.PNG' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'app/css/estilos.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#">Acerca de</a>
+            <a href="registro.html">Registro</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <section class="textos-header">
+            <h1>P A L I L L I T O S</h1>
+            <h2>El arte de tejer!</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+    <main>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo">Preguntas Frecuentes</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="{% static 'app/img/ilustracion1.jpg' %}" alt="ilustracion1" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <h3><span>1</span>¿Donde Comprar?</h3>
+                    <p>Vendemos al detalle via whatsapp y facebook o en la pagina web. No hay mínimo de compra.</p>
+                    <h3><span>2</span>¿Cual es el horario de atencion?</h3>
+                    <p>Atendemos de lunes a viernes de 9:00 am a 17:00. Horario continuado.
+                    <h3><span>2</span>¿Tienen despacho a domicilio?</h3>
+                    <p>Despachamos a domicilio a todas las comunas y regiones del país. El tiempo de entrega son hasta 10 días hábiles aproximadamente.
+                    </p>
+                </div>
+            </div>
+        </section>
+        </div>
+        <h2 class="titulo-final">&copy; V.V Informatica Ltda</h2>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+body{
+    font-family: Tahoma, arial, verdana;
+    color: #666;
+}
+.container{
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 800px;
+    margin: auto;
+}
+.formulario{
+    width: 400px;
+    background-color: #FFF;
+    padding: 20px;
+    border: solid 1px #CCC;
+    margin: auto;
+}
+#alert{
+    width: 250px;
+    padding: 5px;
+    background-color: rgb(240, 236, 32);
+    color: rgb(15, 15, 15);
+    display: none;
+}

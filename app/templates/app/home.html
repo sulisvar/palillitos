@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Palillitos</title>
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'app/img/vvdesign.PNG' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'app/css/estilos.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a>Valor UF hoy {{valorUF}}</a><br><br>
+            <a href="http://localhost:8000/">Inicio</a> |
+            <a href="http://localhost:8000/faqs/">Preguntas Frecuentes</a> |
+            <a href="http://localhost:8000/contacto/">Contacto</a> |
+            {% if perms.app.add_producto %}
+            <a href="{% url 'agregar_producto' %}">Agregar Productos</a> |
+            {% endif %}
+            {% if perms.app.view_producto %}
+            <a href="{% url 'listar_productos' %}">Listar Productos</a> |
+            {% endif %}
+            
+            {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}">cerrar sesíon</a>
+                    <a href="#">@{{ user.username }}</a>
+            {% else %}
+                    <a href="{% url 'login' %}">Iniciar sesíon</a> ||
+                    <a href="{% url 'registro' %}">Registrate</a>
+            {% endif %}
+        </nav>
+        
+        <section class="textos-header">
+            <h1>P A L I L L I T O S</h1>
+            <h2>Pasión por el tejido!</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+    <main>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo">Nuestros servicios</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="{% static 'app/img/ilustracion1.jpg' %}" alt="ilustracion1">
+                <div class="contenido-textos">
+                    <h3><span>1</span>Venta de insumos para tejidos!</h3>
+                    <p>Trabajamos para ti y asi poder llevarte la mejor calidad para tus nuevas creaciones</p>
+                    <h3><span>2</span>Despacho Express!</h3>
+                    <p>Sabemos lo valioso que es el tiempo para ti, por ello nuestro compromiso es hacerte llegar tus productos en el menor 
+                        tiempo posible.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Galeria de imagenes</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="{% static 'app/img/img1.jpg' %}" alt="img1">
+                        <div class="hover-galeria">
+                            <img src="{% static 'app/img/icono1.png' %}" alt="icono1">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'app/img/img2.jpg' %}" alt="img2">
+                        <div class="hover-galeria">
+                            <img src="{% static 'app/img/icono1.png' %}" alt="icono1">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'app/img/img3.jpg' %}" alt="img3">
+                        <div class="hover-galeria">
+                            <img src="{% static 'app/img/icono1.png' %}" alt="icono1">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'app/img/img4.jpg' %}" alt="img4">
+                        <div class="hover-galeria">
+                            <img src="{% static 'app/img/icono1.png' %}" alt="icono1">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'app/img/img5.jpg' %}" alt="img5">
+                        <div class="hover-galeria">
+                            <img src="{% static 'app/img/icono1.png' %}" alt="icono1">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'app/img/img6.jpg' %}" alt="img6">
+                        <div class="hover-galeria">
+                            <img src="{% static 'app/img/icono1.png' %}" alt="icono1">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'app/img/img7.jpg' %}" alt="img7">
+                        <div class="hover-galeria">
+                            <img src="{% static 'app/img/icono1.png' %}" alt="icono1">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="{% static 'app/img/img8.jpg' %}" alt="img8">
+                        <div class="hover-galeria">
+                            <img src="{% static 'app/img/icono1.png' %}" alt="icono1">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="clientes contenedor">
+            <h2 class="titulo">Que dicen nuestros clientes</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="{% static 'app/img/face1.jpg' %}" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>Isaias</h4>
+                        <p>Cuando pedi mi gorro de lana, no pense que fuese a quedar asi de increible, gracias Aracelly!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'app/img/face2.jpg' %}" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>Abigail</h4>
+                        <p>Muy contenta con el pedido, rapida entrega y buena atencion!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-services">
+            <div class="contenedor">
+                <h2 class="titulo">Nuestros productos</h2>
+                <div class="servicio-cont">
+                    <div class="servicio-ind">
+                        <img src="{% static 'app/img/ilustracion4.jpg' %}" alt="ilustracion4">
+                        <h3>Bufandas</h3>
+                        <p>Linda bufanda verdad? Ven por la tuya! En el color que mas te guste!</p>
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="{% static 'app/img/ilustracion2.jpg' %}" alt="ilustracion2">
+                        <h3>Tejidos</h3>
+                        <p>Si deseas un chaleco tejido a crochet, estas en el lugar indicado</p>
+                    </div>
+                    <div class="servicio-ind">
+                        <img src="{% static 'app/img/ilustracion3.jpg' %}" alt="ilustracion3">
+                        <h3>Lanas</h3>
+                        <p>Necesitas tejer? tenemos lanas para ti de la mejor calidad!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Fono</h4>
+                <p>+5698296711</p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>aracellyj@palillitos.cl</p>
+            </div>
+            <div class="content-foo">
+                <h4>Ubicacion</h4>
+                <p>Los arandanos 772 - San Bernardo</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; V.V Informatica Ltda</h2>
+    </footer>
+</body>
+
+</html>
